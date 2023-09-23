@@ -8,10 +8,12 @@ wget https://wordpress.org/latest.tar.gz (dnf install wget jika tidak bisa mengg
 tar -xvf latest.tar.gz
 cp wordpress/wp-config-sample.php wordpress/wp-config.php
 nano wordpress/wp-config.php
+
 define('DB_NAME', 'wordpress');
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'your_root_password');
 define('DB_HOST', 'localhost');
+
 cp -R wordpress /var/www/html/ (-R digunakan untuk mengcopy direktori dan seluruh filenya)
 nano /etc/httpd/conf.d/wordpress.conf
 
